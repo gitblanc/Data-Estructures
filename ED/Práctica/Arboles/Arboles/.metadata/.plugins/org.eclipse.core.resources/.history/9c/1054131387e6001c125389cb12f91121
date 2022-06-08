@@ -1,0 +1,137 @@
+/**
+ * 
+ */
+package avl;
+
+/**
+ * @author UO285176
+ *
+ */
+public class AVLTree<T extends Comparable<T>> {
+
+	private AVLNode<T> raiz;// nodo raiz del árbol AVL
+
+	public AVLTree() {
+		this.raiz = null;
+	}
+
+	/*
+	 * Si la raíz o la clave es null devuelve null
+	 * 
+	 * Sino invoca a un método recursivo con el nodo a partir del cual queremos
+	 * buscar y la clave a buscar. Este método busca la clave por la derecha o por
+	 * la izquierda dependiendo de si la clave es mayor o menor que el nodo a partir
+	 * del cual se busca. Devuelve el nodo si lo encuentra o null si no lo encuentra
+	 */
+	public AVLNode<T> searchNode(T clave) {
+		if (this.raiz == null || clave == null)
+			return null;
+		return searchNodeRecursivo(this.raiz, clave);
+	}
+
+	private AVLNode<T> searchNodeRecursivo(AVLNode<T> nodoraiz, T clave) {
+		if (nodoraiz == null)
+			return null;
+		else if (nodoraiz.getInfo().compareTo(clave) > 0)// si la raiz es mayor que la clave, busca por la izquierda
+			return searchNodeRecursivo(nodoraiz.getLeft(), clave);
+		else if (nodoraiz.getInfo().compareTo(clave) < 0)// si la raiz es menor que la clave, busca por la derecha
+			return searchNodeRecursivo(nodoraiz.getRight(), clave);
+		else if (nodoraiz.getInfo().compareTo(clave) == 0)// si la raiz y la clave coinciden, se devuelve el nodo raiz
+			return nodoraiz;
+		else// si no lo encuentra devuelve null
+			return null;
+	}
+
+	/*
+	 * Si la clave es null devuelve -2 Si la clave ya existe devuelve -1 Si la raíz
+	 * es null, se crea un nodo con la clave que se asigna a la raíz y devuelve 0.
+	 * 
+	 * Sino invoca a un método recursivo con el nodo a partir del cual queremos
+	 * insertar y la clave a insertar. Se asigna a la raíz lo que devuelve el método
+	 * recursivo y devuelve 0.
+	 * 
+	 * Este método busca un hueco por la derecha o por la izquierda, dependiendo de
+	 * si la clave es mayor o menor que el nodo a partir del cual se quiere
+	 * insertar. Cuando lo encuentra, crea un nuevo nodo con la clave y lo asigna
+	 * por la derecha o por la izquierda. Actualiza el nodo y lo devuelve
+	 */
+	public int addNode(T clave) {
+		if(clave == null)
+			return -2;
+		else if(searchNode(clave) != null)
+			return -1;
+		else if(this.raiz == null) {
+			this.raiz = new AVLNode<T>(clave);
+			return 0;
+		}
+		else {
+			this.raiz = addNodeRecursivo(this.raiz, clave);//se genera un nuevo nodo que se le asigna
+			return 0;
+		}
+	}
+
+	private AVLNode<T> addNodeRecursivo(AVLNode<T> nodoraiz, T clave) {
+		if(nodoraiz.getInfo().compareTo(clave) > 0) {//si la raiz es mayor que la clave, busca por la izquierda
+			if(nodoraiz.getLeft() != null) {//si tiene un hijo izquierdo
+				nodoraiz.setLeft(addNodeRecursivo(nodoraiz.getLeft(), clave));//asigna por la izquierda un nuevo nodo recursivamente
+				return updateAndBalanceIfNecesary(nodoraiz);//devuelve la raiz actualizada
+			}else {//si no tiene hijo izquierdo
+				nodoraiz.setLeft(new AVLNode<T>(clave));//se asigna el nodo al hijo izquierdo
+				return updateAndBalanceIfNecesary(nodoraiz);//devuelve la raiz actualizada
+			}
+		}else if(nodoraiz.getInfo().compareTo(clave) < 0) {//si la raiz es menor que la clave, busca por la derecha
+			if(nodoraiz.getRight() != null) {//si tiene un hijo derecho
+				nodoraiz.setRight(addNodeRecursivo(nodoraiz.getRight(), clave));//se asigna por la derecha un nuevo nodo recursivamente
+				return updateAndBalanceIfNecesary(nodoraiz);//devuelve la raíz actualizada
+			}else {
+				nodoraiz.setRight(new AVLNode<T>(clave));//se asigna un nuevo nodo hijo derecho
+				return updateAndBalanceIfNecesary(nodoraiz);//devuelve la raiz actualizada
+			}
+		}else //si ya existiese el nodo, no se inserta y devuelve null
+			return null;
+	}
+	
+	/**
+	 * Método privado que llama a una serie de métodos privados que realizan las
+	 * rotaciones del árbol para su correcta organización.
+	 * 
+	 * @param nodo
+	 * @return node
+	 */
+	private AVLNode<T> updateAndBalanceIfNecesary(AVLNode<T> nodo) {
+		nodo.updateBFHeight();
+		if (nodo.getBF() == -2)
+			if (nodo.getLeft().getBF() == 1)
+				nodo = doubleLeftRotation(nodo);
+			else // -1 o cero
+				nodo = singleLeftRotation(nodo);
+		else if (nodo.getBF() == 2)
+			if (nodo.getRight().getBF() == -1)
+				nodo = doubleRightRotation(nodo);
+			else // 1 o cero
+				nodo = singleRightRotation(nodo);
+		return nodo;
+	}
+
+	private AVLNode<T> singleRightRotation(AVLNode<T> nodo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private AVLNode<T> doubleRightRotation(AVLNode<T> nodo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private AVLNode<T> singleLeftRotation(AVLNode<T> nodo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private AVLNode<T> doubleLeftRotation(AVLNode<T> nodo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+}

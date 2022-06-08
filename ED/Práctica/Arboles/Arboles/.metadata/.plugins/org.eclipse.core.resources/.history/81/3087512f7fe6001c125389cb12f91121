@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package avl;
+
+/**
+ * @author omenp
+ *
+ */
+public class AVLNode {
+
+}

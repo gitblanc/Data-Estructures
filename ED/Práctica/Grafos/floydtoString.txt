@@ -1,0 +1,34 @@
+public String floydToString() {
+		int numNodes=size; 
+		String cadena=" "; 
+		DecimalFormat df = new DecimalFormat("#.##"); 
+		
+		 double[][] aFloyd = getAFloyd(); 
+	        if (aFloyd != null) { 
+	            cadena += "\nAFloyd\n"; 
+	            for (int i = 0; i < numNodes; i++) { 
+	                for (int j = 0; j < numNodes; j++) { 
+	                    cadena += df.format(aFloyd[i][j]) + "\t"; 
+	                } 
+	                cadena += "\n"; 
+	            } 
+	        } 
+	  
+	        T[][] pFloyd = getPFloyd(); 
+	        if (pFloyd != null) { 
+	                cadena += "\nPFloyd\n"; 
+	            for (int i = 0; i < numNodes; i++) { 
+	                for (int j = 0; j < numNodes; j++) { 
+	                	if (pFloyd[i][j]==null) cadena+="-"+ "\t";
+	                	
+	                	else cadena += pFloyd[i][j].toString() + "\t"; 
+	                } 
+	                cadena += "\n"; 
+	            } 
+	        } 
+	        return cadena; 
+		
+		
+		
+		
+	}

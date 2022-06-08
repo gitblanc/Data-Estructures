@@ -1,0 +1,19 @@
+INDEX VERSION 1.131+C:\Users\omenp\Desktop\ED\Práctica\Arboles\Arboles\.metadata\.plugins\org.eclipse.jdt.core
+95052901.index
+2177274101.index
+477928483.index
+4152223802.index
+4043651151.index
+2550328433.index
+80693614.index
+3191923854.index
+2228431777.index
+2745529528.index
+3503282059.index
+1865797976.index
+1826713622.index
+1219630968.index
+3048918805.index
+3583719008.index
+3038637035.index
+4150129683.index

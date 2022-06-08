@@ -1,0 +1,72 @@
+/**
+ * 
+ */
+package grafo;
+
+/**
+ * @author UO285176
+ *
+ */
+public class Graph<T> {
+
+	private double[][] weights;//pesos de las aristas
+	private boolean edges;//matriz de aristas
+	private T[] nodes;//Nodos:Lista de nodos
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//public int addNode(T node) {}
+
+//public String toString() { ... }
+//
+//protected int getNode(T node) { ... }
+//
+//public boolean existsNode(T node) {...}
+//
+//public int addEdge(T source, T target, double edgeWeight) { ... }
+//
+//public boolean existEdge(T source, T target) { ... }
+//
+//public double getEdge(T source, T target) { ... }
+//
+//public int removeEdge(T source, T target) { ... }
+//
+//public int removeNode(T node) { ... }
+//
+//public double[] dijkstra(T nodoOrigen) { ... }
+//
+//private int minCost(double[] vectorD, boolean[] visited) { ... }
+//
+//public int floyd() {…}
+//
+//protected double[][] getAFloyd() { … }
+//
+//protected T[][] getPFloyd() { … }
+//
+//public double minCostPath(T origen, T destino) {…}
+//
+//public String path(T origen, T destino) { …}
+//
+//public String recorridoProfundidad(T nodo) { … }
+}

@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package bst;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+/**
+ * @author omenp
+ *
+ */
+class BSTAddTests {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}
