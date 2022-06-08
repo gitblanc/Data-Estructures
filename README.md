@@ -15,7 +15,7 @@ Also the code is documented in Spanish, but is very easy to translate it.
 ## 🗂 Directory organization 🗂
 You will find 3 directories:
 - **Mis Tareas**: it contains my original work that i made for my university homework.
-- **Práctica**: it contains my original work but better done and beter documented, so you'd better check this one. <----- check the previous one ----->
+- **Práctica**: it contains my original work but better done and beter documented, so you'd better check this one.
 - **Teoría**: it contains all the theory that my proyects are based on.
 
 I will also thank you an star if you use this repository :-) 
