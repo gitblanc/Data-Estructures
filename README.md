@@ -1,6 +1,7 @@
 # ⚗ Data-Estructures ⚗
 ---
 ![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![](https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white)
 
 This is a repository where you can find all my work with the following data estructures:
 - Graphs
