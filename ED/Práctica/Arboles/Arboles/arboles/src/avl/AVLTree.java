@@ -276,4 +276,60 @@ public class AVLTree<T extends Comparable<T>> {
 		}
 	}
 
+	// Métodos extra
+
+	/*
+	 * Método que devuelve el padre de un nodo. Devuelve null si el parámetro pasado
+	 * es null. Sino devuelve al padre con un método recursivo
+	 */
+	public AVLNode<T> padreDe(T clave) {
+		if (clave == null)
+			return null;
+		else {
+			return padreDeRecursivo(this.raiz, clave);
+		}
+	}
+
+	private AVLNode<T> padreDeRecursivo(AVLNode<T> nodoraiz, T clave) {
+		if (nodoraiz.getInfo().compareTo(clave) > 0) {// si la raiz es mayor que la clave
+			if (nodoraiz.getLeft() != null && nodoraiz.getLeft().getInfo().equals(clave))// si el hijo izquierdo no es
+																							// null y es el que buscamos
+				return nodoraiz;// devolvemos la raiz, que será el padre
+			else
+				return padreDeRecursivo(nodoraiz.getLeft(), clave);// si no buscamos por la izquierda
+		} else if (nodoraiz.getInfo().compareTo(clave) < 0) {// si la raíz es menor que la clave
+			if (nodoraiz.getRight() != null && nodoraiz.getRight().getInfo().equals(clave))// si el hijo derecho no es
+																							// null y es igual que la
+																							// clave
+				return nodoraiz;// devolvemos al padre
+			else
+				return padreDeRecursivo(nodoraiz.getRight(), clave);// sino buscamos por la derecha
+		} else
+			return null;// si no lo encuentra devolverá null
+	}
+
+	/*
+	 * Método que cuenta el número de aristas desde un nodo inicial hasta un nodo
+	 * final Si el nodo de inicio o el nodo destino o la raiz son null o los nodos
+	 * son el mismo, devuelve 0 Sino devuelve su distancia
+	 */
+	public int numAristas(T source, T target) {
+		if (source == null || target == null || this.raiz == null || source.equals(target))
+			return 0;
+		else {
+			AVLNode<T> inicio = searchNode(source);
+			AVLNode<T> destino = searchNode(target);
+			return cuentaAltura(inicio, destino);
+		}
+	}
+
+	private int cuentaAltura(AVLNode<T> source, AVLNode<T> target) {
+		if (source.getInfo().compareTo(target.getInfo()) > 0) // si el origen es mayor que el destino
+			return cuentaAltura(source.getLeft(), target) + 1;// busca por la izquierda sumando 1 cada vez
+		else if (source.getInfo().compareTo(target.getInfo()) < 0)// si el origen es menor que el destino
+			return cuentaAltura(source.getRight(), target) + 1;// busca por la derecha sumando 1 cada vez
+		else // si son el mismo, encontrado
+			return 0;// devuelve 0
+	}
+
 }
