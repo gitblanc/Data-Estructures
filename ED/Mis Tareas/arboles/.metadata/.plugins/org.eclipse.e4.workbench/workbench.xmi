@@ -363,7 +363,6 @@
     <sharedElements xsi:type="advanced:Area" xmi:id="_6sOXoU9_EeyaTdhhcgFh7Q" elementId="org.eclipse.ui.editorss" selectedElement="_6sOXok9_EeyaTdhhcgFh7Q">
       <children xsi:type="basic:PartStack" xmi:id="_6sOXok9_EeyaTdhhcgFh7Q" elementId="PartStack@5350e389" selectedElement="_F9VUgOZ9EeyfveAuvu0_kA">
         <tags>active</tags>
-        <tags>noFocus</tags>
         <children xsi:type="basic:Part" xmi:id="_FkIKUOZ9EeyfveAuvu0_kA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="AVLNode.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;AVLNode.java&quot; partName=&quot;AVLNode.java&quot; title=&quot;AVLNode.java&quot; tooltip=&quot;Arboles/src/AVL/AVLNode.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Arboles/src/AVL/AVLNode.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1897&quot; selectionTopPixel=&quot;1969&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
@@ -371,7 +370,7 @@
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_F9VUgOZ9EeyfveAuvu0_kA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="AVLTree.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;AVLTree.java&quot; partName=&quot;AVLTree.java&quot; title=&quot;AVLTree.java&quot; tooltip=&quot;Arboles/src/AVL/AVLTree.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Arboles/src/AVL/AVLTree.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;111&quot; selectionOffset=&quot;8877&quot; selectionTopPixel=&quot;5478&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;AVLTree.java&quot; partName=&quot;AVLTree.java&quot; title=&quot;AVLTree.java&quot; tooltip=&quot;Arboles/src/AVL/AVLTree.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Arboles/src/AVL/AVLTree.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;111&quot; selectionOffset=&quot;8877&quot; selectionTopPixel=&quot;7150&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
@@ -633,7 +632,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_6sOYIE9_EeyaTdhhcgFh7Q" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ymHHYOWbEeyfveAuvu0_kA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_6sSBEE9_EeyaTdhhcgFh7Q"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_EnFFIOifEeyYOcpN6Mitgg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_6sSBEE9_EeyaTdhhcgFh7Q"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_6sOYLk9_EeyaTdhhcgFh7Q" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -664,7 +663,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_6sOYe09_EeyaTdhhcgFh7Q" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ymI8leWbEeyfveAuvu0_kA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_6sSAiU9_EeyaTdhhcgFh7Q"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_EnG6UeifEeyYOcpN6Mitgg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_6sSAiU9_EeyaTdhhcgFh7Q"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_6sOYh09_EeyaTdhhcgFh7Q" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
